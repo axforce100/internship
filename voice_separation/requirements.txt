@@ -1,0 +1,9 @@
+tqdm
+numpy
+torch==2.6.0
+pyyaml
+librosa
+mir_eval
+matplotlib
+tensorboardX
+Pillow

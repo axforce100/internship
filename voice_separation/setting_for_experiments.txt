@@ -1,0 +1,14 @@
+
+experiment_05 --> 50000 train, 100 val (unseen)
+experiment_06 --> 1 train, 1 val (seen)
+experiment_07 --> 2 train, 2 val (seen)
+
+experiment_01 --> 5000 train, 20 val (seen)
+experiment_10 --> 50000 train, 100 val (unseen) pre-trained weight from experiment_01, same 100 val as experiment_05
+
+experiment_12 --> Incremental dataset (50k+50k+50k+50k.....) train, 100 val (unseen spk) 
+experiment_13 --> fixed dataset (50000), 100 val (unseen spk)
+
+
+
+python voicefilter/inference.py -c voicefilter/config/default.yaml -e Models/embedder.pt --checkpoint_path chkpt/experiment_01/chkpt_400.pt -m voicefilter/data/test/mixed_wav/000001.wav -r LibriSpeech/test/test-clean/4077/13751/4077-13751-0000.flac -o voicefilter/outp
